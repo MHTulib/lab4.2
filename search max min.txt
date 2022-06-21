@@ -1,0 +1,51 @@
+package matrix;
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		int sum=0;
+		int[][] matrix= {
+				{10, 15, 19},
+				{13, 10, 15},
+				{19, 10, 15}
+				};
+		int larg=0;
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				if(larg<matrix[i][j]) {
+					larg=matrix[i][j];
+				}
+				
+			}
+		}
+		System.out.println("The maximum value is:"+larg);
+		
+		int min=19;
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				if(min>matrix[i][j]) {
+					min=matrix[i][j];
+				}
+				
+			}
+		}
+		System.out.println("The minimum value is:"+min);
+		int src=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Which value you want to search: ");
+		int s=sc.nextInt();
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				if(s==matrix[i][j]) {
+					src=src+1;
+				}
+				
+			}
+		}
+		System.out.println("The "+s+" is used " +src+" Times on matrix ");
+		
+		
+		
+		
+		
+	}}
